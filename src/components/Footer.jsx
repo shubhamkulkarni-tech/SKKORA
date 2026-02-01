@@ -1,7 +1,16 @@
 import Reveal from "@/components/Reveal"
 import { Link } from "react-router-dom"
+import logo from "../assets/LOGO-1.png"
 
 export default function Footer() {
+
+  const goToHero = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <footer className="relative bg-white border-t border-border/60 px-6 pt-28 pb-14">
       <div className="mx-auto max-w-7xl">
@@ -12,9 +21,14 @@ export default function Footer() {
 
             {/* BRAND */}
             <div className="md:col-span-2">
-              <h3 className="text-xl font-semibold tracking-wide text-[#0b2545]">
-                SKKORA
-              </h3>
+              <button
+                onClick={goToHero}
+                className="flex items-center"
+                aria-label="Go to top"
+              >
+                <img src={logo} alt="SKKORA logo" className="h-20 w-auto" />
+              </button>
+
               <p className="mt-4 max-w-md text-[#475569] leading-relaxed">
                 An engineering-first development studio building scalable
                 digital products with clarity, performance, and long-term
@@ -28,10 +42,26 @@ export default function Footer() {
                 Company
               </p>
               <ul className="space-y-3 text-sm text-[#475569]">
-                <li><a href="#services" className="hover:text-[#0b2545]">Services</a></li>
-                <li><a href="#process" className="hover:text-[#0b2545]">Process</a></li>
-                <li><a href="#work" className="hover:text-[#0b2545]">Work</a></li>
-                <li><a href="#contact" className="hover:text-[#0b2545]">Contact</a></li>
+                <li>
+                  <a href="#services" className="hover:text-[#0b2545]">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#process" className="hover:text-[#0b2545]">
+                    Process
+                  </a>
+                </li>
+                <li>
+                  <a href="#work" className="hover:text-[#0b2545]">
+                    Work
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-[#0b2545]">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -43,10 +73,10 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-[#475569]">
                 <li>
                   <a
-                    href="mailto:hello@skkora.com"
+                    href="mailto:skkora.tech@gmail.com"
                     className="hover:text-[#0b2545]"
                   >
-                    hello@skkora.com
+                    skkora.tech@gmail.com
                   </a>
                 </li>
                 <li>India</li>
