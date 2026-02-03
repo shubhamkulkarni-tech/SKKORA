@@ -114,14 +114,6 @@ export default function Footer() {
               >
                 Terms
               </Link>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-[#0b2545]"
-              >
-                LinkedIn
-              </a>
             </div>
           </div>
         </Reveal>
